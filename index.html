@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap"
+    />
+    <style>
+      /* Styling body-Tag */
+
+      body {
+        font-family: "Sono", sans-serif;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      /* Styling des Flexbox-Containers */
+
+      .pricing-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        height: 100vh;
+      }
+
+      /* Styling der 3 Preis-Boxen */
+
+      .pricing-plan {
+        flex: 1;
+        background-color: aliceblue;
+        border-radius: 5px;
+        padding: 20px;
+        max-width: 350px;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      /* Styling Hover-Effekt der 3 Preis-Boxen */
+
+      .pricing-plan:hover {
+        transform: scale(1.1);
+      }
+
+      /* Styling ul-tag */
+      ul {
+        list-style: none;
+      }
+
+      /* Styling aller Buttons*/
+
+      .plan-button {
+        width: fit-content;
+        align-self: center;
+        border-style: hidden;
+        padding: 10px 15px;
+        border-radius: 5px;
+        background-color: #006769;
+        color: white;
+        opacity: 0.6;
+      }
+
+      .plan-button:hover {
+        opacity: 1;
+      }
+
+      /* Styling aller Preis-Box Titel*/
+
+      .plan-title {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      /* Styling aller Preis-Box Preise*/
+
+      .plan-price {
+        font-size: 3em;
+        font-weight: bold;
+      }
+
+      /* Styling des 3. Listen-Features der Preis-Box*/
+
+      .feature-three {
+        margin: 0 20px 0px 20px;
+      }
+
+      /* Styling der einzelnen Preis-Box Listen-Features*/
+
+      li {
+        margin: 0px 20px 20px 20px;
+      }
+
+      /* Styling Image der 1. Preis-box*/
+
+      .image-one {
+        width: 200px;
+        margin-bottom: 20px;
+      }
+
+      /* Styling Image der 2. Preis-box*/
+
+      .image-two {
+        width: 200px;
+        margin-bottom: 20px;
+      }
+
+      /* Styling Image der 3. Preis-box*/
+
+      .image-three {
+        width: 200px;
+        margin-bottom: 20px;
+      }
+
+      /* ---------------Styling Navigation Bar ----------------*/
+
+      /* CSS variables for the nav-bar*/
+
+      :root {
+        --nav-color: #006769;
+        --nav-text: #fff;
+      }
+
+      /* Styling Flexbox-Nav-Container */
+
+      .nav-container {
+        background-color: var(--nav-color);
+        font-size: 1.2rem;
+        height: 70px;
+      }
+      /* Styling Nav-Bar Klasse */
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 80%;
+        margin: auto;
+      }
+
+      /* Styling Nav-Bar Child ul */
+
+      .navbar ul {
+        display: flex;
+      }
+
+      .nav-container .navbar {
+        justify-content: space-between;
+      }
+
+      .nav-container .navbar ul li {
+        padding: 10px;
+        margin: 0 10px;
+      }
+
+      .navbar a {
+        color: var(--nav-text);
+        font-family: "Sono", sans-serif;
+        text-decoration: none;
+      }
+
+      .navbar a:hover {
+        text-decoration: underline;
+      }
+
+      h2 {
+        font-family: "Merriweather Sans", sans-serif;
+        flex-shrink: 0;
+      }
+
+      .footer {
+        color: #111;
+        margin-top: 1rem;
+        font-family: "Sono", sans-serif;
+        flex-shrink: 0;
+        padding-left: 20px;
+      }
+
+      /*----------- Media Queries --------------*/
+
+      @media (max-width: 1250px) {
+        .pricing-container {
+          flex-direction: column;
+          height: 100%;
+          margin-top: 50px;
+        }
+      }
+
+      @media screen and (min-width: 390px) and (max-width: 767px) {
+        .nav-container {
+          height: 100%;
+        }
+
+        .nav-container .navbar {
+          flex-direction: column;
+        }
+
+        h2 {
+          margin-bottom: 0px;
+        }
+
+        .pricing-container {
+          margin-bottom: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-container">
+      <div class="navbar">
+        <h2 class="logo-text">SJW Design</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <img
+          class="image-one"
+          src="assets/images/3401630.png"
+          alt="plant in a lightbulb"
+        />
+        <div class="plan-title">Basic</div>
+        <div class="plan-price">$9.99/month</div>
+        <ul class="plan-features">
+          <li class="feature-one">✅ 10GB Storage</li>
+          <li class="feature-two">✅ 1 User</li>
+          <li class="feature-three">🚫 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <img
+          class="image-two"
+          src="assets/images/3381454.png"
+          alt="hand holding a small plant"
+        />
+        <div class="plan-title">Standard</div>
+        <div class="plan-price">$19.99/month</div>
+        <ul class="plan-features">
+          <li class="feature-one">✅ 50GB Storage</li>
+          <li class="feature-two">✅ 5 Users</li>
+          <li class="feature-three">✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <img class="image-three" src="assets/images/3454290.png" alt="tree" />
+        <div class="plan-title">Premium</div>
+        <div class="plan-price">$49.99/month</div>
+        <ul class="plan-features">
+          <li class="feature-one">✅ 100GB Storage</li>
+          <li class="feature-two">✅ 10 Users</li>
+          <li class="feature-three">✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        <p>© 2025 SJW Design</p>
+      </div>
+    </footer>
+  </body>
+</html>
